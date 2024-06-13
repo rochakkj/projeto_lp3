@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "projeto-lp3"
+name = "project-lp3"
 version = "0.1.0"
 description = ""
 authors = ["Gabriel Martins Rocha <gmrgabriel1@gmail.com>"]
