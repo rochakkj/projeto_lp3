@@ -24,21 +24,29 @@ def produtos():
     return render_template("produtos.html", produtos = lista_produtos)
 
 
-@app.route("/servicos")
-def servicos():
-    return "<h1>Nossos Serviços</h1>"
+@app.route("/termos")
+def termos_servicos():
+    return render_template("termos.html")
+
+@app.route("/politica-de-privacidade")
+def politica_de_privacidade():
+    return render_template("politica-de-privacidade.html")
+
+@app.route("/como-utilizar")
+def como_utilizar():
+    return render_template("como-utilizar.html")
 
 @app.route("/gerar-cpf")
 def gerarCPF():
     cpf = CPF()
 
-    return f"<h1>CPF: {cpf.generate(True)}</h1>"
+    return render_template("gerar-cpf.html", cpfs = cpf.generate(False))
 
 
 @app.route("/gerar-cnpj")
 def gerarCNPJ():
     cnpj = CNPJ()
 
-    return f"<h1>CNPJ: {cnpj.generate(True)}</h1>"
+    return render_template("gerar-cnpj.html", cnpjs = cnpj.generate(False))
 
 app.run()
