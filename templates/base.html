@@ -4,24 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
     <title>{% block title  %}{% endblock %}</title>
-    <style>
-        body{
-            text-align: center;
-        }
 
-        footer.bottom{
-        border-top: 0.1rem outset black;
-        width: 80%;
-        margin-top: 70px;
-        margin-inline: auto;
-        height: 100px;
-        bottom: 0;
-        left: 0;
-        }
-    </style>
 </head>
 <body>
+    <div class="container">
     <nav>
         <a href="/">Home page</a>&nbsp;&nbsp;&nbsp;
         <a href="/contato">Contato</a>&nbsp;&nbsp;&nbsp;
@@ -31,11 +19,12 @@
     
     {% block content %}
     {% endblock %}
-    <footer class="bottom">
-        Desenvolvido por Gabriel Martins Rocha 2024&copy;. <br><br>
+    <div class="footer">
+                Desenvolvido por Gabriel Martins Rocha 2024&copy;. <br><br>
         <a href="/termos">Termos de Serviço</a>&nbsp;&nbsp;&nbsp;
         <a href="/politica-de-privacidade">Política de Privacidade</a>&nbsp;&nbsp;
         <a href="/como-utilizar">Como Utilizar</a>
-    </footer>
+    </div>
+    </div>
 </body>
 </html>

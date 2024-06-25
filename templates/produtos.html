@@ -4,6 +4,7 @@
     
 
 {% block content %}
+    <div class="content">
     <h1>Meus Produtos</h1>
 
     {% for produto in produtos %}
@@ -11,5 +12,5 @@
         <p>{{ produto.descricao }}</p>
         <img src="{{ produto.imagem}}" alt ="imagem">
     {% endfor %}    
-    
+    </div>
 {% endblock %}
